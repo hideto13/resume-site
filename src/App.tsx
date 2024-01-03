@@ -1,5 +1,11 @@
+import About from './components/About/About';
+
 function App() {
-  return <div>Resume site</div>;
+  return (
+    <div>
+      <About />
+    </div>
+  );
 }
 
 export default App;

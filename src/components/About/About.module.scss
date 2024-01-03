@@ -1,0 +1,25 @@
+.about {
+  background: #000524;
+  padding-top: 96px;
+  padding-bottom: 66px;
+  overflow: hidden;
+
+  p {
+    line-height: 30px;
+    color: #ccc;
+  }
+}
+
+.aboutContainer {
+  width: 96%;
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.aboutImgContainer {
+  width: 25%;
+}
+
+.aboutInfoContainer {
+  width: 75%;
+}
