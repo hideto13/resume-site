@@ -1,0 +1,49 @@
+.footer {
+  padding: 48px 0;
+  background-color: var(--colors-bg-dark2);
+  font-size: var(--fs-sm2);
+  text-align: center;
+  position: relative;
+}
+
+.socialLinks {
+  margin: 0 0 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.socialLink {
+  width: 30px;
+  color: var(--colors-text);
+  opacity: 0.3;
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.copyright {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--colors-text-dark2);
+}
+
+.scrollIcon {
+  color: var(--colors-text-dark2);
+  position: absolute;
+  top: -25px;
+  left: calc(50% - 25px);
+  z-index: 100;
+  background-color: white;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 0;
+
+  transition: all 0.3s;
+
+  &:hover {
+    color: var(--colors-bg-dark2);
+  }
+}

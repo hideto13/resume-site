@@ -6,7 +6,6 @@ import {
   selectAllResumeData,
   selectResumeDataInfo,
 } from '../redux/resumeData/resumeData-selectors';
-import { AppDispatch, useAppDispatch } from '../redux/store';
 import { Resume } from '../types';
 import { ThunkDispatch } from '@reduxjs/toolkit';
 

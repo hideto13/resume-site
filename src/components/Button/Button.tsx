@@ -12,6 +12,7 @@ export const Button = ({ children, href, color }: ButtonProps) => (
     className={`${styles.button} ${color === 'dark' ? styles.darkButton : ''}`}
     href={href}
     target='_blank'
+    rel='noreferrer'
   >
     {children}
   </a>

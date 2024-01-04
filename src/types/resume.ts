@@ -1,7 +1,6 @@
 type SocialLink = {
   name: string;
   url: string;
-  className: string;
 };
 
 type Education = {

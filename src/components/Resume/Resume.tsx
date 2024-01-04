@@ -13,7 +13,7 @@ function Resume() {
     return color;
   }
 
-  const [resume, { status, error }] = useResume();
+  const [resume] = useResume();
   const data = resume?.resume;
   if (!data) return null;
 
@@ -45,7 +45,6 @@ function Resume() {
 
   const skills = data.skills.map((skills) => {
     const backgroundColor = getRandomColor();
-    const className = 'bar-expand ' + skills.name.toLowerCase();
     const width = skills.level;
 
     return (

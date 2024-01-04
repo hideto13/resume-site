@@ -1,46 +1,46 @@
 import { useResume } from '../../hooks/use-resume';
+import { Container } from '../Container/Container';
+import { FaGithub } from 'react-icons/fa';
+import { FaArrowCircleUp } from 'react-icons/fa';
+import styles from './Footer.module.scss';
 const Fade = require('react-reveal/Fade');
 
 function Footer() {
-  const [resume, { status, error }] = useResume();
+  const [resume] = useResume();
   const data = resume?.main;
   if (!data) return null;
+
+  const date = new Date();
 
   const networks = data.social.map(function (network) {
     return (
       <li key={network.name}>
-        <a href={network.url}>
-          <i className={network.className}></i>
+        <a href={network.url} target='_blank' rel='noreferrer'>
+          {network.name === 'github' && (
+            <FaGithub size={'30px'} className={styles.socialLink} />
+          )}
         </a>
       </li>
     );
   });
 
   return (
-    <footer>
-      <div className='row'>
+    <footer className={styles.footer}>
+      <Container>
         <Fade bottom>
-          <div className='twelve columns'>
-            <ul className='social-links'>{networks}</ul>
+          <ul className={styles.socialLinks}>{networks}</ul>
 
-            <ul className='copyright'>
-              <li>&copy; Copyright 2021 Nordic Giant</li>
-              <li>
-                Design by{' '}
-                <a title='Styleshout' href='http://www.styleshout.com/'>
-                  Styleshout
-                </a>
-              </li>
-            </ul>
-          </div>
+          <ul className={styles.copyright}>
+            <li>&copy; Copyright {date.getFullYear()}</li>
+          </ul>
         </Fade>
 
         <div id='go-top'>
-          <a className='smoothscroll' title='Back to Top' href='#home'>
-            <i className='icon-up-open'></i>
+          <a title='Back to Top' href='#home'>
+            <FaArrowCircleUp className={styles.scrollIcon} size={'50px'} />
           </a>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }

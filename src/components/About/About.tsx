@@ -6,7 +6,7 @@ import styles from './About.module.scss';
 const Fade = require('react-reveal/Fade');
 
 function About() {
-  const [resume, { status, error }] = useResume();
+  const [resume] = useResume();
   const data = resume?.main;
   if (!data) return null;
 

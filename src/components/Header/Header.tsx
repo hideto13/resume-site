@@ -1,5 +1,5 @@
 import { useResume } from '../../hooks/use-resume';
-import { IoArrowDownCircleSharp } from 'react-icons/io5';
+import { FaArrowCircleDown } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 import { FaBook } from 'react-icons/fa';
 import { Button } from '../Button/Button';
@@ -8,7 +8,7 @@ const ParticlesBg = require('particles-bg').default;
 const Fade = require('react-reveal/Fade');
 
 function Header() {
-  const [resume, { status, error }] = useResume();
+  const [resume] = useResume();
   const data = resume?.main;
   if (!data) return null;
 
@@ -87,7 +87,7 @@ function Header() {
 
       <p className='scrolldown'>
         <a className='smoothscroll' href='#about'>
-          <IoArrowDownCircleSharp className={styles.scrollIcon} size={'60px'} />
+          <FaArrowCircleDown className={styles.scrollIcon} size={'50px'} />
         </a>
       </p>
     </header>

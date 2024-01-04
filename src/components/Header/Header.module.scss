@@ -99,4 +99,9 @@
 .scrollIcon {
   color: var(--colors-text);
   width: 60px;
+  transition: all 0.3s;
+
+  &:hover {
+    color: var(--colors-text-dark2);
+  }
 }
