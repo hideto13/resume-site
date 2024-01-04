@@ -1,5 +1,8 @@
 import { useResume } from '../../hooks/use-resume';
 import { IoArrowDownCircleSharp } from 'react-icons/io5';
+import { FaGithub } from 'react-icons/fa';
+import { FaBook } from 'react-icons/fa';
+import { Button } from '../Button/Button';
 import styles from './Header.module.scss';
 const ParticlesBg = require('particles-bg').default;
 const Fade = require('react-reveal/Fade');
@@ -69,12 +72,14 @@ function Header() {
           <hr />
           <Fade bottom duration={2000}>
             <ul className={styles.social}>
-              <a href={data.project} className={styles.socialBtn}>
-                <i className='fa fa-book'></i>Project
-              </a>
-              <a href={data.github} className={styles.socialBtn}>
-                <i className='fa fa-github'></i>Github
-              </a>
+              <Button href={data.project}>
+                <FaBook />
+                Project
+              </Button>
+              <Button href={data.github} color='dark'>
+                <FaGithub />
+                Github
+              </Button>
             </ul>
           </Fade>
         </div>

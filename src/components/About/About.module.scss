@@ -14,12 +14,40 @@
   width: 96%;
   max-width: 1020px;
   margin: 0 auto;
+  display: flex;
 }
 
 .aboutImgContainer {
   width: 25%;
 }
 
+.aboutImg {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
 .aboutInfoContainer {
   width: 75%;
+}
+
+.aboutTitle {
+  color: #fff;
+  margin-bottom: 12px;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.aboutContacts {
+  display: flex;
+  gap: 50px;
+}
+
+.aboutDetails {
+  min-width: 40%;
+}
+
+.downloadButton {
+  margin-top: 50px;
 }
