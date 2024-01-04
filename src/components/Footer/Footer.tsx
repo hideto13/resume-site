@@ -2,6 +2,7 @@ import { useResume } from '../../hooks/use-resume';
 import { Container } from '../Container/Container';
 import { FaGithub } from 'react-icons/fa';
 import { FaArrowCircleUp } from 'react-icons/fa';
+import { Link } from 'react-scroll';
 import styles from './Footer.module.scss';
 const Fade = require('react-reveal/Fade');
 
@@ -36,9 +37,9 @@ function Footer() {
         </Fade>
 
         <div id='go-top'>
-          <a title='Back to Top' href='#home'>
+          <Link to='home' spy={true} smooth={true} duration={500}>
             <FaArrowCircleUp className={styles.scrollIcon} size={'50px'} />
-          </a>
+          </Link>
         </div>
       </Container>
     </footer>

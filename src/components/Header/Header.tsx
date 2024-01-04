@@ -2,6 +2,7 @@ import { useResume } from '../../hooks/use-resume';
 import { FaArrowCircleDown } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 import { FaBook } from 'react-icons/fa';
+import { Link } from 'react-scroll';
 import { Button } from '../Button/Button';
 import styles from './Header.module.scss';
 const ParticlesBg = require('particles-bg').default;
@@ -29,35 +30,65 @@ function Header() {
         </a>
 
         <ul id='nav' className={styles.navList}>
-          <li className='current'>
-            <a className={styles.navItem} href='#home'>
+          <li className={styles.navItem}>
+            <Link
+              to='home'
+              activeClass={styles.active}
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
               Home
-            </a>
+            </Link>
           </li>
 
-          <li>
-            <a className={styles.navItem} href='#about'>
+          <li className={styles.navItem}>
+            <Link
+              to='about'
+              activeClass={styles.active}
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
               About
-            </a>
+            </Link>
           </li>
 
-          <li>
-            <a className={styles.navItem} href='#resume'>
+          <li className={styles.navItem}>
+            <Link
+              to='resume'
+              activeClass={styles.active}
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
               Resume
-            </a>
+            </Link>
           </li>
 
-          <li>
-            <a className={styles.navItem} href='#portfolio'>
+          <li className={styles.navItem}>
+            <Link
+              to='portfolio'
+              activeClass={styles.active}
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
               Works
-            </a>
+            </Link>
           </li>
 
-          <li>
-            <a className={styles.navItem} href='#contact'>
+          {/* <li className={styles.navItem}>
+           <Link
+              to='contact'
+              activeClass={styles.active}
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
               Contact
-            </a>
-          </li>
+            </Link>
+          </li> */}
         </ul>
       </nav>
 
@@ -86,9 +117,14 @@ function Header() {
       </div>
 
       <p className='scrolldown'>
-        <a className='smoothscroll' href='#about'>
+        <Link
+          to='about'
+          spy={true}
+          smooth={true}
+          duration={500}
+        >
           <FaArrowCircleDown className={styles.scrollIcon} size={'50px'} />
-        </a>
+        </Link>
       </p>
     </header>
   );

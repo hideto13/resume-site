@@ -35,4 +35,5 @@ body {
   color: var(--colors-text);
   font-weight: var(--fw-normal);
   line-height: normal;
+  scroll-behavior: smooth;
 }

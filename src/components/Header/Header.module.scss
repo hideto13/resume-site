@@ -37,7 +37,7 @@
 
 .navItem {
   display: inline-block;
-  padding: 7px 13px;
+  padding: 7px 0;
   font-size: var(--fs-sm);
   font-weight: var(--fw-bold);
   text-transform: uppercase;
@@ -47,6 +47,15 @@
   text-align: left;
   color: var(--colors-text);
   transition: color 0.2s ease-in-out;
+  cursor: pointer;
+
+  a {
+    padding: 16px 13px;
+  }
+
+  .active {
+    color: red;
+  }
 }
 
 .banner {
@@ -100,6 +109,7 @@
   color: var(--colors-text);
   width: 60px;
   transition: all 0.3s;
+  cursor: pointer;
 
   &:hover {
     color: var(--colors-text-dark2);
