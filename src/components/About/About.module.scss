@@ -5,15 +5,12 @@
   overflow: hidden;
 
   p {
-    line-height: 30px;
-    color: #ccc;
+    color: var(--colors-text-light);
+    line-height: 32px;
   }
 }
 
 .aboutContainer {
-  width: 96%;
-  max-width: 1020px;
-  margin: 0 auto;
   display: flex;
 }
 
@@ -32,11 +29,10 @@
 }
 
 .aboutTitle {
-  color: #fff;
+  color: var(--colors-text);
   margin-bottom: 12px;
-  font-size: 22px;
-  line-height: 30px;
-  font-weight: 700;
+  font-size: var(--fs-md2);
+  font-weight: var(--fw-bold);
 }
 
 .aboutContacts {

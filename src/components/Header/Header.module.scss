@@ -7,8 +7,8 @@
 }
 
 .navigation {
-  background-color: #333;
-  font-size: 12px;
+  background-color: var(--colors-bg-dark);
+  font-size: var(--fs-sm);
   width: 100%;
   text-transform: uppercase;
   letter-spacing: 2.5px;
@@ -38,14 +38,14 @@
 .navItem {
   display: inline-block;
   padding: 7px 13px;
-  line-height: 32px;
-  font-size: 12px;
-  font-weight: 700;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
   text-transform: uppercase;
   letter-spacing: 2.5px;
+  line-height: 32px;
   text-decoration: none;
   text-align: left;
-  color: #fff;
+  color: var(--colors-text);
   transition: color 0.2s ease-in-out;
 }
 
@@ -71,33 +71,32 @@
 }
 
 .bannerTitle {
-  font-size: 80px;
-  font-weight: 700;
-  color: #fff;
+  font-size: var(--fs-xlg);
+  font-weight: var(--fw-bold);
+  color: var(--colors-text);
   letter-spacing: -2px;
   margin: 0 auto 18px auto;
 }
 
 .bannerText {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 18px;
-  color: #ddd;
+  font-family: var(--family-serif);
+  font-size: var(--fs-md);
+  color: var(--colors-text-light);
   margin: 0 auto 20px;
   width: 70%;
-  line-height: normal;
   letter-spacing: 1;
-  font-weight: 400;
+  font-weight: var(--fw-normal);
 }
 
 .social {
   margin: 24px auto;
   padding: 0;
-  font-size: 30px;
+  font-size: var(--fs-lg);
   display: flex;
   gap: 12px;
 }
 
 .scrollIcon {
-  color: white;
+  color: var(--colors-text);
   width: 60px;
 }

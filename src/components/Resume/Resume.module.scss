@@ -1,0 +1,98 @@
+.resume {
+  background-color: var(--colors-bg-light);
+  padding: 90px 0 0px;
+  overflow: hidden;
+}
+
+.resumeContainer {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e8e8e8;
+
+  &:last-child {
+    border: none;
+  }
+}
+
+.resumeTitle {
+  color: var(--colors-text-dark);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
+  letter-spacing: 1px;
+  border-bottom: 3px solid #0762f9;
+  padding-bottom: 6px;
+  text-transform: uppercase;
+  width: max-content;
+}
+
+.resumeSubtitle {
+  color: var(--colors-text-dark);
+  font-size: var(--fs-md2);
+  font-weight: var(--fw-bold);
+}
+
+.resumeTitleContainer {
+  width: 25%;
+}
+
+.resumeDescriptionContainer {
+  width: 70%;
+}
+
+.resumeInfo {
+  color: var(--colors-text-dark2);
+  font-size: var(--fs-md);
+  font-family: var(--family-serif);
+  font-style: italic;
+  display: flex;
+  margin: 0;
+  gap: 12px;
+  align-items: center;
+
+  em {
+    font-style: normal;
+    font-family: var(--family);
+  }
+}
+
+.resumeSkills {
+  width: 90%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.resumeSkillTitle {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
+  color: var(--colors-text-dark);
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  top: -36px;
+}
+
+.resumeSkillBar {
+  position: relative;
+  margin-bottom: 80px;
+  background: #333;
+  height: 42px;
+  border-radius: 0px;
+  width: 100%;
+}
+
+.resumeSkillBarScale {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding-right: 24px;
+  background: #313131;
+  display: inline-block;
+  height: 42px;
+  line-height: 42px;
+  border-radius: 0px;
+}

@@ -1,4 +1,6 @@
 import { useResume } from '../../hooks/use-resume';
+import { Container } from '../Container/Container';
+import styles from './Resume.module.scss';
 const Slide = require('react-reveal/Slide');
 
 function Resume() {
@@ -18,8 +20,8 @@ function Resume() {
   const education = data.education.map(function (education) {
     return (
       <div key={education.school}>
-        <h3>{education.school}</h3>
-        <p className='info'>
+        <h3 className={styles.resumeSubtitle}>{education.school}</h3>
+        <p className={styles.resumeInfo}>
           {education.degree} <span>&bull;</span>
           <em className='date'>{education.graduated}</em>
         </p>
@@ -31,8 +33,8 @@ function Resume() {
   const work = data.work.map(function (work) {
     return (
       <div key={work.company}>
-        <h3>{work.company}</h3>
-        <p className='info'>
+        <h3 className={styles.resumeSubtitle}>{work.company}</h3>
+        <p className={styles.resumeInfo}>
           {work.title}
           <span>&bull;</span> <em className='date'>{work.years}</em>
         </p>
@@ -47,60 +49,62 @@ function Resume() {
     const width = skills.level;
 
     return (
-      <li key={skills.name}>
-        <span style={{ width, backgroundColor }} className={className}></span>
-        <em>{skills.name}</em>
+      <li key={skills.name} className={styles.resumeSkillBar}>
+        <span
+          style={{ width, backgroundColor }}
+          className={styles.resumeSkillBarScale}
+        ></span>
+        <em className={styles.resumeSkillTitle}>{skills.name}</em>
       </li>
     );
   });
 
   return (
-    <section id='resume'>
-      <Slide left duration={1300}>
-        <div className='row education'>
-          <div className='three columns header-col'>
-            <h1>
-              <span>Education</span>
-            </h1>
-          </div>
+    <section id='resume' className={styles.resume}>
+      <Container>
+        <Slide left duration={1300}>
+          <div className={styles.resumeContainer}>
+            <div className={styles.resumeTitleContainer}>
+              <h1 className={styles.resumeTitle}>
+                <span>Education</span>
+              </h1>
+            </div>
 
-          <div className='nine columns main-col'>
-            <div className='row item'>
-              <div className='twelve columns'>{education}</div>
+            <div className={styles.resumeDescriptionContainer}>
+              <div className='row item'>
+                <div className='twelve columns'>{education}</div>
+              </div>
             </div>
           </div>
-        </div>
-      </Slide>
+        </Slide>
 
-      <Slide left duration={1300}>
-        <div className='row work'>
-          <div className='three columns header-col'>
-            <h1>
-              <span>Work</span>
-            </h1>
+        <Slide left duration={1300}>
+          <div className={styles.resumeContainer}>
+            <div className={styles.resumeTitleContainer}>
+              <h1 className={styles.resumeTitle}>
+                <span>Work</span>
+              </h1>
+            </div>
+
+            <div className={styles.resumeDescriptionContainer}>{work}</div>
           </div>
+        </Slide>
 
-          <div className='nine columns main-col'>{work}</div>
-        </div>
-      </Slide>
+        <Slide left duration={1300}>
+          <div className={styles.resumeContainer}>
+            <div className={styles.resumeTitleContainer}>
+              <h1 className={styles.resumeTitle}>
+                <span>Skills</span>
+              </h1>
+            </div>
 
-      <Slide left duration={1300}>
-        <div className='row skill'>
-          <div className='three columns header-col'>
-            <h1>
-              <span>Skills</span>
-            </h1>
-          </div>
-
-          <div className='nine columns main-col'>
-            <p>{data.skillmessage}</p>
-
-            <div className='bars'>
-              <ul className='skills'>{skills}</ul>
+            <div className={styles.resumeDescriptionContainer}>
+              <p>{data.skillmessage}</p>
+              <ul className={styles.resumeSkills}>{skills}</ul>
             </div>
           </div>
-        </div>
-      </Slide>
+        </Slide>
+      </Container>
     </section>
   );
 }

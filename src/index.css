@@ -1,6 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Typography */
+  --family: 'Open Sans', sans-serif;
+  --family-serif: 'Libre Baskerville', serif;
+
+  --fs-sm: 12px;
+  --fs-md: 18px;
+  --fs-md2: 22px;
+  --fs-lg: 30px;
+  --fs-xlg: 80px;
+
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-bold: 700;
+
+  --colors-bg: #3a4263;
+  --colors-bg-dark: #333;
+  --colors-bg-light: #fff;
+  --colors-text: #fff;
+  --colors-text-light: #ddd;
+  --colors-text-dark: #313131;
+  --colors-text-dark2: #6e7881;
+}
+
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--family);
   margin: 0;
   padding: 0;
-  background: #3a4263;
+  background: var(--colors-bg);
+  color: var(--colors-text);
+  font-weight: var(--fw-normal);
+  line-height: normal;
 }
