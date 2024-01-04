@@ -1,4 +1,6 @@
 import { useResume } from '../../hooks/use-resume';
+import { IoArrowDownCircleSharp } from 'react-icons/io5';
+import styles from './Header.module.scss';
 const ParticlesBg = require('particles-bg').default;
 const Fade = require('react-reveal/Fade');
 
@@ -8,65 +10,69 @@ function Header() {
   if (!data) return null;
 
   return (
-    <header id='home'>
-      <ParticlesBg type='circle' bg={true} />
+    <header id='home' className={styles.header}>
+      <ParticlesBg type='cobweb' bg={true} />
 
-      <nav id='nav-wrap'>
-        <a className='mobile-btn' href='#nav-wrap' title='Show navigation'>
+      <nav id='nav-wrap' className={styles.navigation}>
+        <a
+          className={styles.mobileBtn}
+          href='#nav-wrap'
+          title='Show navigation'
+        >
           Show navigation
         </a>
-        <a className='mobile-btn' href='#home' title='Hide navigation'>
+        <a className={styles.mobileBtn} href='#home' title='Hide navigation'>
           Hide navigation
         </a>
 
-        <ul id='nav' className='nav'>
+        <ul id='nav' className={styles.navList}>
           <li className='current'>
-            <a className='smoothscroll' href='#home'>
+            <a className={styles.navItem} href='#home'>
               Home
             </a>
           </li>
 
           <li>
-            <a className='smoothscroll' href='#about'>
+            <a className={styles.navItem} href='#about'>
               About
             </a>
           </li>
 
           <li>
-            <a className='smoothscroll' href='#resume'>
+            <a className={styles.navItem} href='#resume'>
               Resume
             </a>
           </li>
 
           <li>
-            <a className='smoothscroll' href='#portfolio'>
+            <a className={styles.navItem} href='#portfolio'>
               Works
             </a>
           </li>
 
           <li>
-            <a className='smoothscroll' href='#contact'>
+            <a className={styles.navItem} href='#contact'>
               Contact
             </a>
           </li>
         </ul>
       </nav>
 
-      <div className='row banner'>
-        <div className='banner-text'>
+      <div className={styles.banner}>
+        <div className={styles.bannerWrapper}>
           <Fade bottom>
-            <h1 className='responsive-headline'>{data.name}</h1>
+            <h1 className={styles.bannerTitle}>{data.name}</h1>
           </Fade>
           <Fade bottom duration={1200}>
-            <h3>{data.description}.</h3>
+            <h3 className={styles.bannerText}>{data.description}.</h3>
           </Fade>
           <hr />
           <Fade bottom duration={2000}>
-            <ul className='social'>
-              <a href={data.project} className='button btn project-btn'>
+            <ul className={styles.social}>
+              <a href={data.project} className={styles.socialBtn}>
                 <i className='fa fa-book'></i>Project
               </a>
-              <a href={data.github} className='button btn github-btn'>
+              <a href={data.github} className={styles.socialBtn}>
                 <i className='fa fa-github'></i>Github
               </a>
             </ul>
@@ -76,7 +82,7 @@ function Header() {
 
       <p className='scrolldown'>
         <a className='smoothscroll' href='#about'>
-          <i className='icon-down-circle'></i>
+          <IoArrowDownCircleSharp className={styles.scrollIcon} size={'60px'} />
         </a>
       </p>
     </header>
