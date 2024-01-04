@@ -10,7 +10,7 @@ function About() {
   const profilepic = 'images/' + data.image;
 
   return (
-    <section className={styles.about}>
+    <section className={styles.about} id='about'>
       <Fade duration={1000}>
         <div className={styles.aboutContainer}>
           <div className={styles.aboutImgContainer}>
