@@ -114,18 +114,12 @@ function Header() {
             </ul>
           </Fade>
         </div>
+        <p className={styles.scrolldown}>
+          <Link to='about' spy={true} smooth={true} duration={500}>
+            <FaArrowCircleDown className={styles.scrollIcon} size={'50px'} />
+          </Link>
+        </p>
       </div>
-
-      <p className='scrolldown'>
-        <Link
-          to='about'
-          spy={true}
-          smooth={true}
-          duration={500}
-        >
-          <FaArrowCircleDown className={styles.scrollIcon} size={'50px'} />
-        </Link>
-      </p>
     </header>
   );
 }
