@@ -27,6 +27,16 @@
   --colors-text-dark2: #6e7881;
 }
 
+@media (max-width: 768px) {
+  :root {
+    --fs-sm: 10px;
+    --fs-md: 14px;
+    --fs-md2: 26px;
+    --fs-lg: 22px;
+    --fs-xlg: 48px;
+  }
+}
+
 body {
   font-family: var(--family);
   margin: 0;

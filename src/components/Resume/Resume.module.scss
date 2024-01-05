@@ -2,6 +2,9 @@
   background-color: var(--colors-bg-light);
   padding: 90px 0 0px;
   overflow: hidden;
+  @media (max-width: 768px) {
+    padding-top: 50px;
+  }
 }
 
 .resumeContainer {
@@ -13,6 +16,13 @@
 
   &:last-child {
     border: none;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 0 20px;
+    margin-bottom: 34px;
+    gap: 0;
   }
 }
 
@@ -35,10 +45,16 @@
 
 .resumeTitleContainer {
   width: 25%;
+  @media (max-width: 768px) {
+    width: auto;
+  }
 }
 
 .resumeDescriptionContainer {
   width: 70%;
+  @media (max-width: 768px) {
+    width: auto;
+  }
 }
 
 .resumeInfo {
@@ -62,6 +78,9 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  @media (max-width: 768px) {
+    width: auto;
+  }
 }
 
 .resumeSkillTitle {
@@ -82,6 +101,10 @@
   height: 42px;
   border-radius: 0px;
   width: 100%;
+  @media (max-width: 768px) {
+    height: 30px;
+    margin-bottom: 60px;
+  }
 }
 
 .resumeSkillBarScale {
@@ -95,4 +118,7 @@
   height: 42px;
   line-height: 42px;
   border-radius: 0px;
+  @media (max-width: 768px) {
+    height: 30px;
+  }
 }
