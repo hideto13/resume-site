@@ -1,3 +1,4 @@
+import { useRef, useEffect, useState } from 'react';
 import { useResume } from '../../hooks/use-resume';
 import { FaArrowCircleDown } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
@@ -9,15 +10,52 @@ const ParticlesBg = require('particles-bg').default;
 const Fade = require('react-reveal/Fade');
 
 function Header() {
+  const bannerRef = useRef(null);
   const [resume] = useResume();
   const data = resume?.main;
+  const [headerVisible, setHeaderVisible] = useState(true);
+  const [headerTransparent, setHeaderTransparent] = useState(true);
+
+  const elementIsVisibleInViewport = (el: HTMLElement) => {
+    const rect = el.getBoundingClientRect();
+    return rect.height + rect.top > 0;
+  };
+
+  function onScroll() {
+    if (!bannerRef.current) return;
+    if (window.scrollY < 10) {
+      setHeaderVisible(true);
+      setHeaderTransparent(true);
+    } else if (elementIsVisibleInViewport(bannerRef.current)) {
+      setHeaderVisible(false);
+    } else {
+      setHeaderTransparent(false);
+      setHeaderVisible(true);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+    };
+  }, []);
+
   if (!data) return null;
 
   return (
     <header id='home' className={styles.header}>
       <ParticlesBg type='cobweb' bg={true} />
 
-      <nav id='nav-wrap' className={styles.navigation}>
+      <nav
+        id='nav-wrap'
+        className={styles.navigation}
+        style={{
+          background: headerTransparent ? 'transparent' : '#333',
+          visibility: headerVisible ? 'visible' : 'hidden',
+          opacity: headerVisible ? '1' : '0',
+        }}
+      >
         <a
           className={styles.mobileBtn}
           href='#nav-wrap'
@@ -92,7 +130,7 @@ function Header() {
         </ul>
       </nav>
 
-      <div className={styles.banner}>
+      <div className={styles.banner} ref={bannerRef}>
         <div className={styles.bannerWrapper}>
           <Fade bottom>
             <h1 className={styles.bannerTitle}>{data.name}</h1>
