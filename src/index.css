@@ -15,6 +15,7 @@
 
   --fw-light: 300;
   --fw-normal: 400;
+  --fw-semibold: 600;
   --fw-bold: 700;
 
   --colors-bg: #3a4263;
@@ -25,6 +26,8 @@
   --colors-text-light: #ddd;
   --colors-text-dark: #313131;
   --colors-text-dark2: #6e7881;
+
+  --shadow: 0 0 1px 0 var(--colors-text-dark2);
 }
 
 @media (max-width: 768px) {
