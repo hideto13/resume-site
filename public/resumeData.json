@@ -1,7 +1,7 @@
 {
   "main": {
     "name": "Tanya Kozlova",
-    "description": "I am a web development engineer and I use react to develop pages",
+    "description": "I am a web development engineer and I use React.js to develop pages",
     "image": "profilepic.jpg",
     "bio": "This is my bio",
     "contactmessage": "Please contact me with email",
@@ -29,7 +29,7 @@
     "education": [
       {
         "school": "RUDN",
-        "degree": "",
+        "degree": "Applied mathematics and computer science",
         "graduated": "June 2021",
         "description": ""
       },
@@ -49,8 +49,8 @@
       },
       {
         "company": "OnGrid Systems",
-        "title": "",
-        "years": "",
+        "title": "Technical support specialist",
+        "years": "November 2020 - May 2021",
         "description": ""
       }
     ],
@@ -89,10 +89,28 @@
   "portfolio": {
     "projects": [
       {
-        "title": "Project1",
+        "title": "Wishlist App",
         "category": "My projects",
-        "image": "",
-        "url": ""
+        "image": "wishapp.png",
+        "url": "https://wishlist-app-lac.vercel.app/"
+      },
+      {
+        "title": "Tetris",
+        "category": "My projects",
+        "image": "tetris.png",
+        "url": "https://tetris-hideto13.vercel.app/"
+      },
+      {
+        "title": "Resume",
+        "category": "My projects",
+        "image": "resume.png",
+        "url": "https://resume-site-olive.vercel.app/"
+      },
+      {
+        "title": "Find GitHub User",
+        "category": "My projects",
+        "image": "finduser.png",
+        "url": "https://gh-find-user.vercel.app/"
       }
     ]
   }
