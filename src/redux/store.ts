@@ -2,11 +2,13 @@ import axios from 'axios';
 import { configureStore } from '@reduxjs/toolkit';
 import * as api from './config';
 import { resumeDataReducer } from './resumeData/resumeData-slice';
+import { previewDataReducer } from './previewPortfolio/previewPortfolio-slice';
 import { useDispatch } from 'react-redux';
 
 export const store = configureStore({
   reducer: {
     resume: resumeDataReducer,
+    preview: previewDataReducer,
   },
   devTools: true,
   middleware: (getDefaultMiddlware) =>
