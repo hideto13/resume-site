@@ -89,7 +89,7 @@
   "portfolio": {
     "projects": [
       {
-        "title": "Wishlist App",
+        "title": "WishList",
         "category": "My projects",
         "image": "wishapp.png",
         "url": "https://wishlist-app-lac.vercel.app/"
@@ -101,13 +101,13 @@
         "url": "https://tetris-hideto13.vercel.app/"
       },
       {
-        "title": "Resume",
+        "title": "Resume site",
         "category": "My projects",
         "image": "resume.png",
         "url": "https://resume-site-olive.vercel.app/"
       },
       {
-        "title": "Find GitHub User",
+        "title": "GitHub User Finder",
         "category": "My projects",
         "image": "finduser.png",
         "url": "https://gh-find-user.vercel.app/"

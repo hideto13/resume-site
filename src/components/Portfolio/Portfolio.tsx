@@ -1,5 +1,6 @@
 import { useResume } from '../../hooks/use-resume';
 import { Container } from '../Container/Container';
+import { usePreview } from '../../hooks/use-preview';
 import styles from './Portfolio.module.scss';
 const Fade = require('react-reveal/Fade');
 
@@ -7,10 +8,14 @@ let id = 0;
 function Portfolio() {
   const [resume] = useResume();
   const data = resume?.portfolio;
+  const urls = data?.projects.map((project) => project.url) || [];
+  const [preview] = usePreview(urls);
+
   if (!data) return null;
 
   const projects = data.projects.map(function (projects) {
     let projectImage = 'images/' + projects.image;
+    const currentPreview = preview?.find((p) => p.title === projects.title);
 
     return (
       <a
@@ -21,7 +26,7 @@ function Portfolio() {
       >
         <img
           alt={projects.title}
-          src={projectImage}
+          src={currentPreview?.image || projectImage}
           className={styles.portfolioImg}
         />
         <div className={styles.portfolioItemText}>{projects.title}</div>
